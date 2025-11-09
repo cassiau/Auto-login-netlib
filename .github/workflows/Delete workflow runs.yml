@@ -6,14 +6,14 @@ on:
 # Run monthly, at 00:00 on the 1st day of month.
 
 jobs:
-  del_runs:
+  delete_runs:
     runs-on: ubuntu-latest
     permissions:
       actions: write
       contents: read
     steps:
       - name: Delete workflow runs
-        uses: Mattraks/delete-workflow-runs@v2
+        uses: Mattraks/delete-workflow-runs@v2.1.0
         with:
           token: ${{ github.token }}
           repository: 'ccassiau/Auto-login-netlib'
